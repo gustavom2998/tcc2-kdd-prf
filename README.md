@@ -6,7 +6,7 @@ Repositório contendo código-fonte para realização de Projeto de Graduação 
 
 Por favor, clone o repositório. Caso você nunca tenha clonado algo de um repositório, [confira este tutorial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-O arquivo **relatório.html** pode ser visualizado com qualquer navegador. Por ser um arquivo R Markdown, qualquer parte do código utilizado para produzir as visualizações e transformações pode ser visualizado através do collapse.
+O arquivo **relatório.html** pode ser visualizado com qualquer navegador. Por ser um arquivo R Markdown, qualquer parte do código utilizado para produzir as visualizações e transformações pode ser visualizado através do collapse. Note a presença de um botão chamado "CODE" no canto superior direito da tabela, e também próximo as visualizações e blocos de saída de código. Estes botões podem ser utilizados para mostrar e esconder o código-fonte por trás da saída. 
 
 ![alt text](Images/demo_relatorio.gif)
 
