@@ -1,47 +1,55 @@
-# ANÁLISE DE DADOS DE ACIDENTES DE TRÂNSITO DA POLÍCIA RODOVIÁRIA FEDERAL NO PERÍODO DE 2017 A 2019
+# ANALYSIS OF TRAFFIC ACCIDENT DATA FROM THE FEDERAL HIGHWAY POLICE DATASET FROM 2017 TO 2019
 
-Repositório contendo código-fonte para realização de Projeto de Graduação 2 do aluno Gustavo Fardin Monti, do Curso de Engenharia da Computação (CEUNES).
+English (EN) | [Português (PT-BR)](./README-pt.md)
 
-## Como utilizar este repositório
+Repository containing source code for the student Gustavo Fardin Monti's Undergraduate thesis for his BE in Computer Engineering at the Federal University of Espirito Santo (UFES).
 
-Por favor, clone o repositório. Caso você nunca tenha clonado algo de um repositório, [confira este tutorial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
+## Thesis Summary
 
-O arquivo **relatório.html** pode ser visualizado com qualquer navegador. Por ser um arquivo R Markdown, qualquer parte do código utilizado para produzir as visualizações e transformações pode ser visualizado através do collapse. Note a presença de um botão chamado "CODE" no canto superior direito da tabela, e também próximo as visualizações e blocos de saída de código. Estes botões podem ser utilizados para mostrar e esconder o código-fonte por trás da saída. 
+With its continental dimensions, Brazil is a country with a great highway network, responsible for integrating the country by allowing the movement and transport of merchandise. However, due to its large extension and high traffic of vehicles, the highway network has an abundant number of accidents that inspires research. The objective of this study was to find patterns between attributes of the road-traffic accident database grouped by individuals of the Federal Highway Police corresponding to the years 2017 to 2019 to understand the factors that influence the profile of a road traffic accident victim. The process of Knowledge Discovery in Databases was applied to the public database. The R programming language and the RStudio tool were used to execute the necessary steps for this study. The steps of Pre-processing and Exploratory Analysis were executed simultaneously. In the data mining step, the Apriori algorithm was used, resulting in a set of association rules for each value of the columns of interest (Sex, Physical State, and Involvement), thereby producing approximately 50 rules per attribute-value pair with confidence larger than 0,8 and lift larger than 1,2. The results obtained by applying the Apriori algorithm were rules with confidence greater than 0,8 and lift greater than 1,2. Using the R programming language, we applied the process of Knowledge Discovery to the Federal Highway Police data set in order to generate association rules. By interpreting the rules, our findings are: A significant part of the dataset is comprised of male, uninjured drivers; Passengers are associated with female individuals who sustained minor injuries; Pedestrians are associated with more severe injuries; Witnesses are associated with missing values.
+
+## How to use this repository
+
+Please clone this repository locally. In case you have never done this, check out the following [tutorial](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+The file [`relatorio.html`](./relatorio.html) can be viewed with any web browser. Being an R Markdown file, any part of the code used to generate visualizations and transformations can be viewed using the collapse feature. Notice the presence of a button called "CODE" in the upper right corner of the table, as well as next to the visualizations and code output blocks. These buttons can be used to show and hide the source code responsible for the output.
 
 ![alt text](Images/demo_relatorio.gif)
 
-Caso você queira, você também pode explorar os mapas interativos criados de dados acidentes. Estes gráficos foram separados do relatório principal devido ao tamanho dos arquivos. Há dois tipos principais de mapas:
-- Mapa de calor: Mapa interativo que permite visualizar os acidentes como pontos no mapa. Uma grande concentração de acidentes é representado pela cor vermelha. Os circulos com numero representam agrupmentos de acidentes. Um exemplo pode ser visto no GIF abaixo.
-- Mapa coroplético: Mapa interativo que mostra o numero de acidentes por unidade federativa.
+If you wish to, you can also explore the [folder](./Mapas%20Leaflet/) containing the interactive maps created from accident data. These graphics have been separated from the main report due to file size. There are two main types of maps:
 
-Para os  dois tipos de mapas, há um arquivo para cada ano.
+- [Heatmap](./Mapas%20Leaflet/mapa2017.html): An interactive map that allows you to visualize accidents as points on the map. A high concentration of accidents is represented by the color red. Circles with numbers represent clusters of accidents. An example can be seen in the GIF below.
+- [Choropleth Map](./Mapas%20Leaflet/mapaUF2017.html): An interactive map that displays the number of accidents per federal unit.
+
+For the two types of maps, there is a file for each year of data.
 
 ![alt text](Images/demo_mapa.gif)
 
-Caso queira explorar o código-fonte por trás deste arquivo, favor abrir o arquivo **relatório.Rmd** através do RStudio. 
+In case you want to see the source code behind the rendered markdown notebook, please check the file `relatório.Rmd` in RStudio.
 
 ![alt text](Images/demo_rstudio.gif)
 
-## Organização de Arquivos
+## File tree
 
-📦**tcc2-kdd-prf**: Raiz do repositório. \
- ┣ 📂**Base de Dados**: Fonte de dados na forma crua. \
- ┣ 📂**Mapas Leaflet**: Mapas interativos gerados durante a análise exploratória. \
- ┣ 📜**BRUFE250GC_SIR.cpg**: Dados de contorno utilizados para gerar mapas. \
- ┣ 📜**BRUFE250GC_SIR.dbf**: Dados de contorno utilizados para gerar mapas. \
- ┣ 📜**BRUFE250GC_SIR.prj**: Dados de contorno utilizados para gerar mapas. \
- ┣ 📜**BRUFE250GC_SIR.shp**: Dados de contorno utilizados para gerar mapas. \
- ┣ 📜**BRUFE250GC_SIR.shx**: Dados de contorno utilizados para gerar mapas. \
- ┣ 📜**dadosSessao.RData**: Variáveis da sessão RStudio exportadas. \
- ┣ 📜**README.md**: Este arquivo. \
- ┣ 📜**ref.bib**: Arquivo de referências para o relatório. \
- ┣ 📜**relatorio.html**: Relatório compilado. Visualizar com um navegador. \
- ┣ 📜**relatorio.Rmd**: Código Fonte/Notebook do relatório. \
- ┗ 📜**TCC2.pdf**: Projeto de graduação.
+📦**tcc2-kdd-prf**: \
+ ┣ 📂**Base de Dados**: Raw data source. \
+ ┣ 📂**Mapas Leaflet**: Interactive maps generated during the analysis. \
+ ┣ 📜**BRUFE250GC_SIR.cpg**: Contour data used to generate maps. \
+ ┣ 📜**BRUFE250GC_SIR.dbf**: Contour data used to generate maps. \
+ ┣ 📜**BRUFE250GC_SIR.prj**: Contour data used to generate maps. \
+ ┣ 📜**BRUFE250GC_SIR.shp**: Contour data used to generate maps. \
+ ┣ 📜**BRUFE250GC_SIR.shx**: Contour data used to generate maps. \
+ ┣ 📜**dadosSessao.RData**: Exported RStudio session containing Variables. \
+ ┣ 📜**README.md**: This file. \
+ ┣ 📜**README-pt.md**: This file in Portuguese. \
+ ┣ 📜**ref.bib**: Bibliographical references used for the report. \
+ ┣ 📜**relatorio.html**: Rendered markdown file. \
+ ┣ 📜**relatorio.Rmd**: Source code for markdown file. \
+ ┗ 📜**TCC2.pdf**: Undergraduate thesis PDF.
 
- ## Dependências
+ ## Dependencies
 
- A lista de dependências (incluindo a versão do RStudio) pode ser visualizadas através do Relatório compilado. Abaixo, anexou-se uma cópia:
+The following lists includes the dependencies (include the RStudio version) used to build the report.
 
 ```R
 ## R version 3.6.2 (2019-12-12)
